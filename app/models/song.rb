@@ -26,5 +26,5 @@ class Song < ActiveRecord::Base
     contents
   end
 
-  
+
 end
