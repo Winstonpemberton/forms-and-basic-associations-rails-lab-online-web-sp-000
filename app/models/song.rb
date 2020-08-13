@@ -18,7 +18,7 @@ class Song < ActiveRecord::Base
       self.notes < note
     end
   end
-  
+
   def post_ids=(ids)
   ids.each do |id|
     post = Post.find(id)
