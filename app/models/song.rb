@@ -12,9 +12,9 @@ class Song < ActiveRecord::Base
     self.artist ? self.artist.name : nil
   end
 
-  def note_contents=(contents)
-    contents.each do |content|
-      self.notes = Notes.find_or_create_by(content: content)
+  def song_notes=(notes)
+    notes.each do |note|
+      self.notes.build(content: note)
     end
   end
 
