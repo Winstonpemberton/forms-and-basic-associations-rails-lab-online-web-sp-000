@@ -8,7 +8,7 @@ class Song < ActiveRecord::Base
     self.artist = Artist.find_or_create_by(name: name)
   end
 
-def category_name
-   self.artist ? self.artist.name : nil
-end
+  def category_name
+    self.artist ? self.artist.name : nil
+  end
 end
